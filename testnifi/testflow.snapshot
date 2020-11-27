@@ -50,7 +50,27 @@
           "x" : -725.7774326197809,
           "y" : 380.4222650570092
         },
-        "processGroups" : [ ],
+        "processGroups" : [ {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ ],
+          "controllerServices" : [ ],
+          "funnels" : [ ],
+          "groupIdentifier" : "809da6b2-c4fb-32a1-9a6d-7af416e478c6",
+          "identifier" : "0df263fb-0b65-3c8f-8a7e-0294aef10bef",
+          "inputPorts" : [ ],
+          "labels" : [ ],
+          "name" : "dgsdf",
+          "outputPorts" : [ ],
+          "position" : {
+            "x" : 438.00001507857587,
+            "y" : 161.99999729889385
+          },
+          "processGroups" : [ ],
+          "processors" : [ ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { }
+        } ],
         "processors" : [ {
           "autoTerminatedRelationships" : [ ],
           "bulletinLevel" : "WARN",
@@ -114,6 +134,70 @@
           "schedulingStrategy" : "TIMER_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.AttributesToJSON",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.11.4.2.0.3.0-13"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "809da6b2-c4fb-32a1-9a6d-7af416e478c6",
+          "identifier" : "19cf5a04-ad1e-3810-9159-b4ff758fc977",
+          "name" : "DetectDuplicate",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 808.0,
+            "y" : 376.0
+          },
+          "properties" : {
+            "Cache Entry Identifier" : "${hash.value}",
+            "Cache The Entry Identifier" : "true",
+            "FlowFile Description" : ""
+          },
+          "propertyDescriptors" : {
+            "Cache Entry Identifier" : {
+              "displayName" : "Cache Entry Identifier",
+              "identifiesControllerService" : false,
+              "name" : "Cache Entry Identifier",
+              "sensitive" : false
+            },
+            "Cache The Entry Identifier" : {
+              "displayName" : "Cache The Entry Identifier",
+              "identifiesControllerService" : false,
+              "name" : "Cache The Entry Identifier",
+              "sensitive" : false
+            },
+            "Age Off Duration" : {
+              "displayName" : "Age Off Duration",
+              "identifiesControllerService" : false,
+              "name" : "Age Off Duration",
+              "sensitive" : false
+            },
+            "FlowFile Description" : {
+              "displayName" : "FlowFile Description",
+              "identifiesControllerService" : false,
+              "name" : "FlowFile Description",
+              "sensitive" : false
+            },
+            "Distributed Cache Service" : {
+              "displayName" : "Distributed Cache Service",
+              "identifiesControllerService" : true,
+              "name" : "Distributed Cache Service",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.DetectDuplicate",
           "yieldDuration" : "1 sec"
         }, {
           "autoTerminatedRelationships" : [ ],

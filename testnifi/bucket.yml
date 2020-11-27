@@ -1,6 +1,6 @@
 flows:
-  5b157368-e5c5-4084-9aeb-e7aa067663b6: {ver: 1, file: testflow.snapshot, comments: version1,
-    author: csso_paulonunes, created: 1606495707884, flowName: testflow, flowDesc: some
+  5b157368-e5c5-4084-9aeb-e7aa067663b6: {ver: 2, file: testflow.snapshot, comments: v2,
+    author: csso_paulonunes, created: 1606495744062, flowName: testflow, flowDesc: some
       desc}
 layoutVer: 1
 bucketId: 262e50cc-5be5-404f-b5d8-d253243a310b
